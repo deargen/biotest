@@ -2,6 +2,7 @@ import inspect
 import logging
 import os
 from datetime import datetime, timezone
+from os import PathLike
 from pathlib import Path
 
 from rich.console import Console
@@ -10,9 +11,6 @@ from rich.theme import Theme
 
 from biotest import LOG_DIR, PROJECT_DIR, __version__, default_log_level
 
-# 옵션으로 `from accelerate.logging import get_logger`
-# 사용하시면 로깅할 때 main_process_only=False, in_order=True 등 옵션 사용 가능합니다
-# https://huggingface.co/docs/accelerate/package_reference/logging
 logger = logging.getLogger(__name__)
 
 console = Console(
@@ -29,6 +27,7 @@ console = Console(
 
 def setup_logging(
     console_level: int | str = default_log_level,
+    log_dir: str | PathLike | None = None,
     output_files: list[str] | None = None,
     file_levels: list[int] | None = None,
 ):
@@ -38,14 +37,24 @@ def setup_logging(
     You should call this function at the beginning of your script.
 
     Args:
-        console_level: Logging level for console. Defaults to INFO or env var BIOTEST_LOG_LEVEL.
-        output_files: List of output file paths, relative to LOG_DIR. If None, use default.
+        console_level: Logging level for console. Defaults to INFO or env var MLPROJECT_LOG_LEVEL.
+        log_dir: Directory to save log files. If None, do not save log files.
+        output_files: List of output file paths, relative to log_dir. If None, use default.
         file_levels: List of logging levels for each output file. If None, use default.
     """
-    if output_files is None:
-        output_files = ["{date:%Y%m%d-%H%M%S}-{name}-{levelname}-{version}.log"]
-    if file_levels is None:
-        file_levels = [logging.INFO]
+    if log_dir is None:
+        assert output_files is None, "output_files must be None if log_dir is None"
+        assert file_levels is None, "file_levels must be None if log_dir is None"
+
+        output_files = []
+        file_levels = []
+    else:
+        log_dir = Path(log_dir)
+
+        if output_files is None:
+            output_files = ["{date:%Y%m%d-%H%M%S}-{name}-{levelname}-{version}.log"]
+        if file_levels is None:
+            file_levels = [logging.INFO]
 
     assert len(output_files) == len(
         file_levels

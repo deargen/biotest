@@ -1,4 +1,5 @@
 import hashlib
+from collections.abc import Sequence
 from io import IOBase
 from os import PathLike
 from pathlib import Path
@@ -36,7 +37,7 @@ def _read_file_or_io(file: str | PathLike | IOBase, *, decode=True):
             return f.read()
 
 
-def compare_two_files_sha(
+def assert_two_files_equal_sha(
     file1: str | PathLike | IOBase, file2: str | PathLike | IOBase
 ):
     """
@@ -52,8 +53,11 @@ def compare_two_files_sha(
     ), f"{file1} and {file2} have different SHA1 hashes."
 
 
-def compare_two_npys_within_tolerance(
-    npy1: str | PathLike | np.ndarray, npy2: str | PathLike | np.ndarray, tolerance=1e-6
+def assert_two_npys_within_tolerance(
+    npy1: str | PathLike | np.ndarray,
+    npy2: str | PathLike | np.ndarray,
+    *,
+    tolerance=1e-6,
 ):
     """
     Assert that two npy files are almost the same within a tolerance.
@@ -73,8 +77,8 @@ def compare_two_npys_within_tolerance(
     )
 
 
-def compare_two_pdbqt_files_within_tolerance(
-    file1: str | PathLike | IOBase, file2: str | PathLike | IOBase, tolerance=1e-3
+def assert_two_pdbqt_files_within_tolerance(
+    file1: str | PathLike | IOBase, file2: str | PathLike | IOBase, *, tolerance=1e-3
 ):
     """
     Assert that two pdbqt files are equal under following conditions.
@@ -122,48 +126,35 @@ def compare_two_pdbqt_files_within_tolerance(
                 )
 
 
-def compare_two_pdb_files_within_tolerance(
-    file1: str | PathLike | IOBase, file2: str | PathLike | IOBase, tolerance=1e-3
+def assert_two_pdb_files_within_tolerance(
+    file1: str | PathLike | IOBase, file2: str | PathLike | IOBase, *, tolerance=1e-3
 ):
+    """
+    Assert that two pdb files are equal under following conditions.
+
+    - ignore the trailing whitespace.
+    - 0.001 default tolerance for Orthogonal coordinates for X,Y,Z in Angstroms.
+
+    Note:
+        - Currently, the implementation is completely equal to assert_two_pdbqt_files_within_tolerance.
+        - It may change and diverge in the future, thus there are two separate functions.
+    """
     # ATOM    998  N   PHE B   9      18.937-159.292 -13.075  1.00 30.49           N
-    pdb1_lines = _read_file_or_io(file1)
-    pdb2_lines = _read_file_or_io(file2)
-    assert len(pdb1_lines) == len(pdb2_lines)
-
-    for pdb1_line, pdb2_line in zip(pdb1_lines, pdb2_lines, strict=True):
-        if pdb1_line.startswith("ATOM") and pdb2_line.startswith("ATOM"):
-            coord_1 = (
-                float(pdb1_line[32:38]),
-                float(pdb1_line[38:47]),
-                float(pdb1_line[47:56]),
-            )
-            coord_2 = (
-                float(pdb2_line[32:38]),
-                float(pdb2_line[38:47]),
-                float(pdb2_line[47:56]),
-            )
-
-            for c1, c2 in zip(coord_1, coord_2, strict=False):
-                assert np.isclose(
-                    c1, c2, atol=tolerance
-                ), f"{file1} and {file2} have different lines."
-                f"{pdb1_line.rstrip()} and {pdb2_line.rstrip()} are not equal."
-
-            line1_except_coord = pdb1_line[:32] + pdb1_line[56:]
-            line2_except_coord = pdb2_line[:32] + pdb2_line[56:]
-            assert (
-                line1_except_coord.rstrip() == line2_except_coord.rstrip()
-            ), f"{file1} and {file2} have different lines."
-            f"{pdb1_line.rstrip()} and {pdb2_line.rstrip()} are not equal."
-
-        else:
-            assert (
-                pdb1_line.rstrip() == pdb2_line.rstrip()
-            ), f"{file1} and {file2} have different lines."
-            f"{pdb1_line.rstrip()} and {pdb2_line.rstrip()} are not equal."
+    assert_two_pdbqt_files_within_tolerance(file1, file2, tolerance)
 
 
-def compare_two_dirs(dir1: Path, dir2: Path, filenames_exclude=None):
+def assert_two_dirs_within_tolerance(
+    dir1: str | PathLike,
+    dir2: str | PathLike,
+    *,
+    tolerance: float = 1e-3,
+    filenames_exclude: Sequence[str] | None = None,
+):
+    """
+    Assert that two directories have the same files with almost the same content within tolerance.
+    """
+    dir1 = Path(dir1)
+    dir2 = Path(dir2)
     assert dir1.is_dir()
     assert dir2.is_dir()
 
@@ -185,10 +176,14 @@ def compare_two_dirs(dir1: Path, dir2: Path, filenames_exclude=None):
         file2 = dir2 / file1.name
 
         if file1.suffix == ".npy":
-            compare_two_npys_within_tolerance(file1, file2)
+            assert_two_npys_within_tolerance(file1, file2, tolerance=tolerance)
         elif file1.suffix == ".pdbqt":
-            compare_two_pdbqt_files_within_tolerance(file1, file2)
+            assert_two_pdbqt_files_within_tolerance(file1, file2, tolerance=tolerance)
         elif file1.suffix == ".pdb":
-            compare_two_pdb_files_within_tolerance(file1, file2)
+            assert_two_pdb_files_within_tolerance(file1, file2, tolerance=tolerance)
+        elif file1.is_dir():
+            assert_two_dirs_within_tolerance(
+                file1, file2, tolerance=tolerance, filenames_exclude=filenames_exclude
+            )
         else:
-            compare_two_files_sha(file1, file2)
+            assert_two_files_equal_sha(file1, file2)
