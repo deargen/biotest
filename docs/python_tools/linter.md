@@ -27,7 +27,7 @@ Linting 결과를 무시하고 싶은 경우:
 ```toml
 [tool.ruff]
 extend-exclude = [
-  "src/ml_project/_version.py",  # CHANGE
+  "src/biotest/_version.py",  # CHANGE
 ]
 
 [tool.ruff.lint]

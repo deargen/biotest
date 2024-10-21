@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [tool.versioneer]
 VCS = "git"
 style = "pep440"
-versionfile_source = "src/ml_project/_version.py" # CHANGE
-versionfile_build = "ml_project/_version.py"      # CHANGE
+versionfile_source = "src/biotest/_version.py" # CHANGE
+versionfile_build = "biotest/_version.py"      # CHANGE
 tag_prefix = "v"
-parentdir_prefix = "ml-project-"                  # CHANGE
+parentdir_prefix = "biotest-"                  # CHANGE
 
 [project]
-name = "ml-project" # CHANGE
+name = "biotest" # CHANGE
 dynamic = ["version", "dependencies", "optional-dependencies"]
 description = "Python project template" # OPTIONALLY CHANGE
 authors = [
@@ -32,10 +32,10 @@ classifiers = [
 keywords = ["development", "template"]
 
 [project.urls]
-"Homepage" = "https://github.com/deargen/python-project-template-2024" # OPTIONALLY CHANGE
+"Homepage" = "https://github.com/deargen/biotest" # OPTIONALLY CHANGE
 
 [project.scripts]
-ml-project = "ml_project.cli:main"
+biotest = "biotest.cli:main"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["deps/requirements.in"]}
@@ -44,13 +44,13 @@ dependencies = {file = ["deps/requirements.in"]}
 where = ["src"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=ml_project" # CHANGE (name of the importing module name)
+addopts = "--cov=biotest" # CHANGE (name of the importing module name)
 testpaths = ["tests"]
 
 [tool.ruff]
 namespace-packages = ["tools", "scripts"]  # for INP rule, suppress on these directories
 extend-exclude = [
-  "src/ml_project/_version.py",  # CHANGE
+  "src/biotest/_version.py",  # CHANGE
 ]
 
 [tool.ruff.lint]
@@ -176,11 +176,11 @@ typeCheckingMode = "standard"
 useLibraryCodeForTypes = true
 autoImportCompletions = true
 
-pythonVersion = "3.11"
+pythonVersion = "3.10"
 # pythonPlatform = "Linux"
 
 [tool.coverage.report]
 omit = [
-  "src/ml_project/_version.py", # CHANGE
+  "src/biotest/_version.py", # CHANGE
   # OPTIONALLY ADD MORE LATER
 ]

@@ -15,16 +15,16 @@ def check_binaries():
 
 def check_env():
     """Check environment variables."""
-    ml_project_data_dir = os.environ.get("ML_PROJECT_DATA_DIR")
+    biotest_data_dir = os.environ.get("BIOTEST_DATA_DIR")
 
-    if ml_project_data_dir is None:
+    if biotest_data_dir is None:
         logger.warning(
-            "🤒 Please set the environment variable ML_PROJECT_DATA_DIR to the path of the data directory.\n"
+            "🤒 Please set the environment variable BIOTEST_DATA_DIR to the path of the data directory.\n"
             f"Otherwise, the default {DATA_DIR} will be used."
         )
         return False
 
-    logger.info(f"✅ ML_PROJECT_DATA_DIR is set to {ml_project_data_dir}")
+    logger.info(f"✅ BIOTEST_DATA_DIR is set to {biotest_data_dir}")
     return True
 
 

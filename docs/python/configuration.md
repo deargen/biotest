@@ -75,7 +75,7 @@ main을 보면, 몇 가지 parameter를 argparse에 넣으면 그에 맞게 conf
 
 사용법을 먼저 보여드리자면, 
 
-### ::: ml_project.utils.config.ExampleConfig
+### ::: biotest.utils.config.ExampleConfig
     options:
         show_docstring_description: true
         show_docstring_examples: false
@@ -83,7 +83,7 @@ main을 보면, 몇 가지 parameter를 argparse에 넣으면 그에 맞게 conf
         show_bases: false
         show_source: true
 
-### ::: ml_project.utils.config.ExampleConfig
+### ::: biotest.utils.config.ExampleConfig
     options:
         show_docstring_description: false
         show_docstring_examples: true
@@ -92,7 +92,7 @@ main을 보면, 몇 가지 parameter를 argparse에 넣으면 그에 맞게 conf
         show_source: false
 
 BaseConfig 소스코드:  
-### ::: ml_project.utils.config.BaseConfig
+### ::: biotest.utils.config.BaseConfig
     options:
         show_docstring_description: false
         show_docstring_examples: false

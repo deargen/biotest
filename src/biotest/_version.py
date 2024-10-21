@@ -51,8 +51,8 @@ def get_config() -> VersioneerConfig:
     cfg.VCS = "git"
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
-    cfg.parentdir_prefix = "ml-project-"
-    cfg.versionfile_source = "src/ml_project/_version.py"
+    cfg.parentdir_prefix = "biotest-"
+    cfg.versionfile_source = "src/biotest/_version.py"
     cfg.verbose = False
     return cfg
 

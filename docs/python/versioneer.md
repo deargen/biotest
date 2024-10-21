@@ -11,9 +11,9 @@
 - [**Versioneer**](https://github.com/python-versioneer/python-versioneer): 버전 정보를 git tag에서 읽어와 python project versioning
 
 ```python hl_lines="3"
-import ml_project
+import biotest
 
-print(ml_project.__version__)
+print(biotest.__version__)
 ```
 
 ```title="out"
@@ -27,7 +27,7 @@ print(ml_project.__version__)
 
 ## 설치
 
-1. `src/ml_project/__init__.py`, `src/ml_project/_version.py` 가져다 쓰기
+1. `src/biotest/__init__.py`, `src/biotest/_version.py` 가져다 쓰기
 2. `pyproject.toml`에 versioneer 관련 섹션 가져다 쓰기
 
 ## 비슷한 툴

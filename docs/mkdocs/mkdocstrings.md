@@ -3,14 +3,14 @@
 ## 설명하고 싶은 모듈/함수/클래스가 있다면 다음과 같이 마크다운 파일에 적으면 됩니다.
 
 ```md
-::: ml_project.two_numbers.TwoNumbers
+::: biotest.two_numbers.TwoNumbers
     options:
         show_root_heading: true
 ```
 
 출력은 아래와 같습니다.
 
-::: ml_project.two_numbers.TwoNumbers
+::: biotest.two_numbers.TwoNumbers
     options:
         show_root_heading: true
 
@@ -19,7 +19,7 @@
 ## Submodule까지 전부 포함하고 싶으시면 다음과 같이 작성합니다.
 
 ```md
-::: ml_project
+::: biotest
     options:
         show_root_heading: true
         show_submodules: true
@@ -27,7 +27,7 @@
 
 출력은 아래와 같습니다.
 
-::: ml_project
+::: biotest
     options:
         show_submodules: true
 
@@ -36,7 +36,7 @@
 ## 소스코드만 출력하고 싶으시면 다음과 같이 작성합니다.
 
 ```md
-::: ml_project.two_numbers.TwoNumbers
+::: biotest.two_numbers.TwoNumbers
     options:
         show_docstring_attributes: false
         show_docstring_functions: false
@@ -58,7 +58,7 @@
 
 출력은 아래와 같습니다.
 
-::: ml_project.two_numbers.TwoNumbers
+::: biotest.two_numbers.TwoNumbers
     options:
         show_docstring_attributes: false
         show_docstring_functions: false
@@ -84,7 +84,7 @@
 
 ## 목차에서 Heading level을 바꾸고 싶다면 마크다운처럼 #을 쓰시면 됩니다.
 ```md
-### ::: ml_project.two_numbers.TwoNumbers
+### ::: biotest.two_numbers.TwoNumbers
     options:
         show_docstring_description: false
         show_docstring_examples: false

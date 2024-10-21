@@ -1,6 +1,6 @@
-site_name: Python Project Template
-site_url: 'https://deargen-ai.gitlab.io/python-project-template-docs'
-repo_url: 'https://github.com/deargen/python-project-template-2024'
+site_name: BioTest
+site_url: 'https://deargen.github.io/biotest'
+repo_url: 'https://github.com/deargen/biotest'
 copyright: |
   &copy; 2024 <a href="https://deargen.me"  target="_blank" rel="noopener">Deargen Inc.</a>
 watch: [mkdocs.yml, README.md, src/]
@@ -94,7 +94,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/deargen/python-project-template-2024
+      link: https://github.com/deargen/biotest
   version:
     provider: mike
 

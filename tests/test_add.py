@@ -1,6 +1,6 @@
 import pytest
 
-from ml_project.two_numbers import TwoNumbers
+from biotest.two_numbers import TwoNumbers
 
 
 def test_zero_zero(zero_zero):
