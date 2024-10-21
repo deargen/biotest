@@ -1,0 +1,14 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "ruff.organizeImports": true,
+  "editor.formatOnSave": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true
+}

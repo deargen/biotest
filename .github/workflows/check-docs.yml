@@ -1,0 +1,15 @@
+name: Check mkdocs build
+
+on: pull_request
+
+jobs:
+  mkdocs:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check mkdocs
+        uses: deargen/workflows/actions/check-mkdocs@master
+        with:
+          src-dir: src
+          requirements-docs-file: deps/lock/x86_64-manylinux_2_28/requirements_docs.txt

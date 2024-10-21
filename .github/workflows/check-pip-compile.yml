@@ -1,0 +1,25 @@
+name: Check pip compile sync
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  check-pip-compile:
+    name: Check pip compile
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: deargen/workflows/actions/check-pip-compile@master
+        with:
+          pyproject-toml-file: pyproject.toml
+          requirements-in-dir: deps
+          requirements-out-dir: deps/lock
+          python-platforms: x86_64-manylinux_2_28,aarch64-apple-darwin,x86_64-apple-darwin,x86_64-pc-windows-msvc
