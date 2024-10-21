@@ -9,74 +9,6 @@
          <lastmod>2024-10-21</lastmod>
     </url>
     <url>
-         <loc>https://deargen.github.io/biotest/latest/git/format_code/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/git/git_commit/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/git/github/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/git/release_version/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/mkdocs/admonitions/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/mkdocs/api_reference/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/mkdocs/gitlab_pages/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/mkdocs/mkdocs/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/mkdocs/mkdocstrings/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python/configuration/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python/logging/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python/versioneer/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python_tools/formatters/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python_tools/linter/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python_tools/lsp/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python_tools/other_vscode_extensions/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/python_tools/todo_highlights/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
          <loc>https://deargen.github.io/biotest/latest/reference/SUMMARY/</loc>
          <lastmod>2024-10-21</lastmod>
     </url>
@@ -85,7 +17,7 @@
          <lastmod>2024-10-21</lastmod>
     </url>
     <url>
-         <loc>https://deargen.github.io/biotest/latest/reference/biotest/two_numbers/</loc>
+         <loc>https://deargen.github.io/biotest/latest/reference/biotest/compare_files/</loc>
          <lastmod>2024-10-21</lastmod>
     </url>
     <url>
@@ -94,10 +26,6 @@
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/biotest/cli/main/</loc>
-         <lastmod>2024-10-21</lastmod>
-    </url>
-    <url>
-         <loc>https://deargen.github.io/biotest/latest/reference/biotest/health/</loc>
          <lastmod>2024-10-21</lastmod>
     </url>
     <url>
