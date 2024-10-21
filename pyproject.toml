@@ -13,7 +13,7 @@ parentdir_prefix = "biotest-"                  # CHANGE
 [project]
 name = "biotest" # CHANGE
 dynamic = ["version", "dependencies", "optional-dependencies"]
-description = "Python project template" # OPTIONALLY CHANGE
+description = "Compare PDB files with a reasonable tolerance" # OPTIONALLY CHANGE
 authors = [
   { name = "Kiyoon Kim" }, # OPTIONALLY CHANGE
 ]
@@ -27,6 +27,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "License :: OSI Approved :: Apache Software License",
 ]
 keywords = ["development", "template"]
@@ -144,7 +145,6 @@ known-first-party = [
   "bio_data_to_db",
   "reduce_binary",
   "apbs_binary",
-  "msms_binary",
   "slack_helpers"
 ]
 
