@@ -140,7 +140,7 @@ def assert_two_pdb_files_within_tolerance(
         - It may change and diverge in the future, thus there are two separate functions.
     """
     # ATOM    998  N   PHE B   9      18.937-159.292 -13.075  1.00 30.49           N
-    assert_two_pdbqt_files_within_tolerance(file1, file2, tolerance)
+    assert_two_pdbqt_files_within_tolerance(file1, file2, tolerance=tolerance)
 
 
 def assert_two_dirs_within_tolerance(
