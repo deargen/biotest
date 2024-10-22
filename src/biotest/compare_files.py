@@ -1,5 +1,4 @@
 import hashlib
-from collections.abc import Sequence
 from io import IOBase
 from os import PathLike
 from pathlib import Path
