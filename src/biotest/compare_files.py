@@ -148,7 +148,7 @@ def assert_two_dirs_within_tolerance(
     dir2: str | PathLike,
     *,
     tolerance: float = 1e-3,
-    filenames_exclude: Sequence[str] | None = None,
+    filenames_exclude: set[str] | None = None,
 ):
     """
     Assert that two directories have the same files with almost the same content within tolerance.
