@@ -86,7 +86,7 @@ def assert_two_pdbqt_files_within_tolerance(
     - 0.001 default tolerance for Orthogonal coordinates for X,Y,Z in Angstroms.
     """
     lines1 = _read_file_or_io(file1)
-    lines2 = _read_file_or_io(file1)
+    lines2 = _read_file_or_io(file2)
 
     assert len(lines1) == len(lines2), f"{file1} and {file2} have different lengths."
 
