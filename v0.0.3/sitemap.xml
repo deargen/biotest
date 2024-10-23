@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/CHANGELOG/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/reference/SUMMARY/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/reference/biotest/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/reference/biotest/compare_files/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/reference/biotest/cli/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://deargen.github.io/biotest/v0.0.3/reference/biotest/cli/main/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+</urlset>
