@@ -1,6 +1,6 @@
 # biotest
 
-![build](https://github.com/deargen/biotest/actions/workflows/build_and_release.yml/badge.svg)
+![build](https://github.com/deargen/biotest/actions/workflows/deploy.yml/badge.svg)
 
 [![image](https://img.shields.io/pypi/v/biotest.svg)](https://pypi.python.org/pypi/biotest)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/biotest)](https://pypistats.org/packages/biotest)
