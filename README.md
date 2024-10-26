@@ -1,5 +1,12 @@
 # biotest
 
+![build](https://github.com/deargen/biotest/actions/workflows/build_and_release.yml/badge.svg)
+
+[![image](https://img.shields.io/pypi/v/biotest.svg)](https://pypi.python.org/pypi/biotest)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/biotest)](https://pypistats.org/packages/biotest)
+[![image](https://img.shields.io/pypi/l/biotest.svg)](https://pypi.python.org/pypi/biotest)
+[![image](https://img.shields.io/pypi/pyversions/biotest.svg)](https://pypi.python.org/pypi/biotest)
+
 |  |  |
 |--|--|
 |[![Ruff](https://img.shields.io/badge/Ruff-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/astral-sh/ruff) |[![Actions status](https://github.com/deargen/biotest/workflows/Style%20checking/badge.svg)](https://github.com/deargen/biotest/actions)|
