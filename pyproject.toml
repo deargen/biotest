@@ -18,7 +18,6 @@ authors = [
   { name = "Kiyoon Kim" }, # OPTIONALLY CHANGE
 ]
 readme = "README.md"
-license = { file = "LICENSE" }
 requires-python = ">=3.10,<4"
 classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
