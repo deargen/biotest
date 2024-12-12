@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://deargen.github.io/biotest/latest/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/CHANGELOG/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/SUMMARY/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/biotest/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/biotest/compare_files/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/biotest/cli/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
     <url>
          <loc>https://deargen.github.io/biotest/latest/reference/biotest/cli/main/</loc>
-         <lastmod>2024-10-26</lastmod>
+         <lastmod>2024-12-12</lastmod>
     </url>
 </urlset>
