@@ -1,5 +1,9 @@
 name: Commit CHANGELOG.md, create a Release and deploy MkDocs
 
+permissions:
+  contents: read
+  id-token: write
+
 on:
   workflow_dispatch:
     inputs:
@@ -45,8 +49,5 @@ jobs:
       - uses: deargen/workflows/actions/setup-python-and-uv@master
       - name: Build and upload to PyPI
         run: |
-          uv venv
-          source .venv/bin/activate
-          uv pip install build twine
-          python -m build . --sdist
-          twine upload dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }} --non-interactive
+          uv build --sdist
+          uv publish
